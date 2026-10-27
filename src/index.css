@@ -1,0 +1,60 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+/* Design tokens — structure mirrors the SolarFlow reference (card/border/muted/primary-soft,
+   soft shadows, 10px radius); palette adapted to the Dixit manufacturing brief. */
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Noto Sans Devanagari", "Noto Sans Gujarati", ui-sans-serif, system-ui, sans-serif;
+  --color-navy: oklch(0.24 0.03 230);
+  --color-navy-deep: oklch(0.18 0.03 230);
+  --color-primary: oklch(0.7 0.2 145);
+  --color-primary-soft: oklch(0.94 0.06 145);
+  --color-teal: oklch(0.7 0.13 160);
+  --color-teal-soft: oklch(0.95 0.045 160);
+  --color-info: oklch(0.65 0.15 240);
+  --color-info-soft: oklch(0.95 0.04 240);
+  --color-background: oklch(0.985 0.003 150);
+  --color-card: oklch(1 0 0);
+  --color-foreground: oklch(0.16 0.015 230);
+  --color-muted: oklch(0.965 0.005 220);
+  --color-muted-foreground: oklch(0.46 0.015 230);
+  --color-border: oklch(0.915 0.006 220);
+  --color-success: oklch(0.7 0.2 145);
+  --color-success-soft: oklch(0.94 0.06 145);
+  --color-warning: oklch(0.75 0.16 70);
+  --color-warning-soft: oklch(0.96 0.05 75);
+  --color-danger: oklch(0.58 0.22 25);
+  --color-danger-soft: oklch(0.96 0.04 25);
+  --color-violet: oklch(0.55 0.17 290);
+  --color-violet-soft: oklch(0.95 0.035 290);
+  --radius-lg: 0.625rem;
+  --radius-xl: 0.875rem;
+  --shadow-soft: 0 1px 2px 0 rgb(16 24 40 / 0.04), 0 1px 3px 0 rgb(16 24 40 / 0.05);
+  --shadow-card: 0 6px 18px -6px rgb(16 24 40 / 0.07), 0 2px 6px -2px rgb(16 24 40 / 0.05);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html, body, #root { height: 100%; }
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-background);
+        color: var(--color-foreground);
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+  }
+  button { cursor: pointer; }
+  button:disabled { cursor: not-allowed; }
+}
+
+@keyframes fade-up { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes slide-in { from { transform: translateX(100%); } to { transform: none; } }
+@keyframes slide-in-left { from { transform: translateX(-100%); } to { transform: none; } }
+@keyframes pulse-ring { 0% { box-shadow: 0 0 0 0 oklch(0.7 0.2 145 / 0.5); } 100% { box-shadow: 0 0 0 8px oklch(0.7 0.2 145 / 0); } }
+.animate-fade-up { animation: fade-up 0.35s ease-out both; }
+.animate-slide-in { animation: slide-in 0.25s ease-out both; }
+.animate-slide-in-left { animation: slide-in-left 0.22s ease-out both; }
+.pulse-ring { animation: pulse-ring 1.6s infinite; }
+.scroll-thin::-webkit-scrollbar { width: 6px; height: 6px; }
+.scroll-thin::-webkit-scrollbar-thumb { background: oklch(0.85 0.01 220); border-radius: 99px; }
+.leaflet-container { font-family: var(--font-sans); border-radius: 0.875rem; }
