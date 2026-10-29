@@ -21,7 +21,7 @@ export default function DealerPortal() {
 
   return (
     <>
-      <PageHeader eyebrow="Dealers" title="Dealer Portal" description={`Welcome, ${dealer.name}. Browse the common price list and place your order — it goes straight to Dixit's sales team.`} />
+      <PageHeader eyebrow="Dealers" title="Dealer Portal" description={`Welcome, ${dealer.name}. Browse the common price list and place your order — it goes straight to our sales team.`} />
       <Tabs value={tab} onChange={setTab} tabs={[{ id: "shop", label: "Price List" }, { id: "orders", label: "My Orders", count: mine.length }]} />
       {tab === "shop" ? (
         <div className="grid gap-5 lg:grid-cols-3">
@@ -46,7 +46,7 @@ export default function DealerPortal() {
               <div className="mt-3 space-y-1 border-t pt-3 text-sm"><div className="flex justify-between text-muted-foreground"><span>Subtotal</span><span>{inr(tot.subtotal)}</span></div>
                 <div className="flex justify-between text-muted-foreground"><span>{tot.intra ? "CGST + SGST 18%" : "IGST 18%"}</span><span>{inr(tot.tax)}</span></div>
                 <div className="flex justify-between text-base font-extrabold text-navy"><span>Total</span><span>{inr(tot.total)}</span></div></div>
-              <Button className="mt-4 w-full" onClick={() => { const id = st.placeDealerOrder(dealer.id, lines); toast.success(`Order ${id} placed`, { description: "Visible to Dixit sales team in Sales Orders" }); setCart({}); setTab("orders"); }}>{t("Place order")}</Button>
+              <Button className="mt-4 w-full" onClick={() => { const id = st.placeDealerOrder(dealer.id, lines); toast.success(`Order ${id} placed`, { description: "Visible to our sales team in Sales Orders" }); setCart({}); setTab("orders"); }}>{t("Place order")}</Button>
             </>)}
           </Card>
         </div>

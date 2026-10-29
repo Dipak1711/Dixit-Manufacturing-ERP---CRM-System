@@ -31,7 +31,7 @@ export default function Dispatch() {
               : ["New", "In Production", "Ready to Dispatch"].includes(r.status) ? <Button size="sm" variant="teal" icon={Truck} onClick={() => { const e = st.dispatchOrder(r.id); e ? toast.error(e) : toast.success(`${r.id} dispatched`); }}>Dispatch</Button> : null) },
           ]} />
       ) : <CustomerMap />}
-      <p className="text-xs text-muted-foreground">Preview: vehicle, driver and LR-number tracking will be added once Dixit confirms how they arrange transport.</p>
+      <p className="text-xs text-muted-foreground">Preview: vehicle, driver and LR-number tracking will be added once the client confirms how they arrange transport.</p>
     </>
   );
 }

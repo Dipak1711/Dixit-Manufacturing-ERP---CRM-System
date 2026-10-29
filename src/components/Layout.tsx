@@ -53,12 +53,9 @@ export const homeFor = (r: Role) => (r === "Dealer" ? "/dealer-portal" : "/");
 
 function Brand() {
   return (
-    <Link to="/" className="flex items-center gap-3">
-      <div className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-primary to-teal shadow-lg">
-        <svg viewBox="0 0 32 32" className="h-6 w-6"><path d="M9 8h7a8 8 0 010 16H9z" fill="none" stroke="white" strokeWidth="3.2" strokeLinejoin="round" /></svg>
-      </div>
+    <Link to="/" className="flex items-center">
       <div className="leading-tight">
-        <div className="text-[15px] font-extrabold tracking-tight text-navy">Dixit Industries</div>
+        <div className="text-[15px] font-extrabold tracking-tight text-navy">Manufacturing</div>
         <div className="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-teal">ERP &amp; CRM</div>
       </div>
     </Link>
@@ -135,9 +132,9 @@ function Menu_({ trigger, children, align = "right" }: { trigger: ReactNode; chi
 }
 
 const userFor: Record<Role, { name: string; sub: string }> = {
-  "Super Admin": { name: "Dixit Bhai (Owner)", sub: "Super Admin" },
+  "Super Admin": { name: "Owner", sub: "Super Admin" },
   Admin: { name: "Pooja Rathod", sub: "Admin · Accounts" },
-  Management: { name: "Mr. Dixit Jr.", sub: "Management" },
+  Management: { name: "Management Head", sub: "Management" },
   Employee: { name: "Ramesh Parmar", sub: "Employee · Production" },
   Dealer: { name: "Jay Ambe Traders", sub: "Dealer · Ahmedabad" },
 };
@@ -158,7 +155,7 @@ function TopNav({ onMenu }: { onMenu: () => void }) {
     <header className="sticky top-0 z-30 flex h-16 items-center gap-3 border-b bg-card/90 px-4 backdrop-blur lg:px-6">
       <button onClick={onMenu} aria-label="Open menu" className="grid h-10 w-10 place-items-center rounded-lg hover:bg-muted lg:hidden"><Menu className="h-5 w-5" /></button>
       <div className="hidden text-sm text-muted-foreground sm:block">
-        <span className="font-semibold text-navy">Dixit Industries</span> · Rajkot, Gujarat
+        <span className="font-semibold text-navy">Manufacturing</span> · Rajkot, Gujarat
       </div>
       <div className="flex-1" />
 

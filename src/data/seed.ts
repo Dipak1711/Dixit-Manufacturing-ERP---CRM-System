@@ -5,7 +5,7 @@ import { addDays, TODAY, isoDay } from "../lib/utils";
 const d = (n: number) => addDays(TODAY, n);
 
 export const COMPANY = {
-  name: "Dixit Industries",
+  name: "Manufacturing",
   city: "Rajkot",
   state: "Gujarat",
   gstin: "24AAAAA0000A1Z5 (sample)",

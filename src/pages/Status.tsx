@@ -33,7 +33,7 @@ export default function Status() {
           ))}
         </ul>
       </Card>
-      <Card title="Assumptions to confirm with Dixit">
+      <Card title="Assumptions to confirm with the client">
         <ul className="list-disc space-y-1.5 pl-5 text-sm text-muted-foreground">
           <li>Product range (stainless-steel process machinery), prices and bills of materials are sample data.</li>
           <li>Company assumed to be in Gujarat; GST is a flat 18% with CGST+SGST inside Gujarat and IGST outside.</li>

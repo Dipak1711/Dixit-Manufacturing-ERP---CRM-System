@@ -21,7 +21,7 @@ export function TotalsBox({ lines, discountPct, state }: { lines: S.QLine[]; dis
       {x.intra ? (<><Row k={`CGST ${S.GST_RATE / 2}%`} v={x.cgst} /><Row k={`SGST ${S.GST_RATE / 2}%`} v={x.sgst} /></>) : <Row k={`IGST ${S.GST_RATE}%`} v={x.igst} />}
       <Row k={t("Grand Total")} v={x.total} b />
       <p className="mt-2 text-[11px] text-muted-foreground">
-        {x.intra ? `Customer is in ${S.COMPANY.state} (same state as Dixit) → CGST + SGST applied.` : `Customer is outside ${S.COMPANY.state} → IGST applied.`}
+        {x.intra ? `Customer is in ${S.COMPANY.state} (same state as us) → CGST + SGST applied.` : `Customer is outside ${S.COMPANY.state} → IGST applied.`}
       </p>
     </div>
   );

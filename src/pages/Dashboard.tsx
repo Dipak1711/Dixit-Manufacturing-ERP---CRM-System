@@ -35,7 +35,7 @@ function OfficeHome() {
   return (
     <>
       <PageHeader eyebrow="Overview" title="Dashboard"
-        description={`${t(hr < 12 ? "Good morning" : "Good afternoon")} — here is how Dixit Industries is doing this financial year (${S.COMPANY.city}).`}
+        description={`${t(hr < 12 ? "Good morning" : "Good afternoon")} — here is how Manufacturing is doing this financial year (${S.COMPANY.city}).`}
         actions={<><Button variant="outline" icon={FileText} onClick={() => nav("/quotations")}>{t("New Quotation")}</Button><Button icon={Factory} onClick={() => nav("/production")}>{t("Production Orders")}</Button></>} />
 
       <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">

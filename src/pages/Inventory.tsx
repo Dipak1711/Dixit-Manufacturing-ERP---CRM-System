@@ -84,7 +84,7 @@ function Assemble({ onClose }: { onClose: () => void }) {
               <td className={`px-3 py-2.5 text-right font-semibold ${r.have < r.need ? "text-danger" : "text-success"}`}>{r.have} {r.unit}</td></tr>))}</tbody></table>
         </div>
         {!ok && qty > 0 && <p className="rounded-lg bg-danger-soft px-3 py-2 text-xs font-medium text-danger">Some parts are short. Raise a purchase order from the Purchase page, then assemble.</p>}
-        <p className="text-xs text-muted-foreground">Bill of materials shown here is a sample and will be replaced by Dixit's real product recipes.</p>
+        <p className="text-xs text-muted-foreground">Bill of materials shown here is a sample and will be replaced by the client's real product recipes.</p>
       </div>
     </Drawer>
   );

@@ -75,7 +75,7 @@ export default function HR() {
               { key: "b", label: "Basis", hideOnMobile: true, render: (r) => r.pay === "Fixed" ? `${inr(r.salary!)} / month · ${daysPresent[r.id] ?? WORKING_DAYS} of ${WORKING_DAYS} days` : `${S.unitsThisMonth[r.id] ?? 0} units × ${inr(r.rate!)}` },
               { key: "a", label: "Earned", align: "right", sort: pay, render: (r) => <b>{inr(pay(r))}</b> },
             ]} />
-          <p className="text-xs text-muted-foreground">Demo calculation: fixed salary = monthly salary ÷ {WORKING_DAYS} × days present; piece-rate = units completed × rate per unit. Final rules (overtime, deductions, advances) will be confirmed with Dixit.</p>
+          <p className="text-xs text-muted-foreground">Demo calculation: fixed salary = monthly salary ÷ {WORKING_DAYS} × days present; piece-rate = units completed × rate per unit. Final rules (overtime, deductions, advances) will be confirmed with the client.</p>
         </>
       )}
 

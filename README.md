@@ -1,4 +1,4 @@
-# Dixit Industries — Manufacturing ERP & CRM (Client Demo)
+# Manufacturing ERP & CRM (Client Demo)
 
 Interactive demonstration on **sample data**. Nothing is sent to a server; changes live in the browser and reset on refresh.
 
